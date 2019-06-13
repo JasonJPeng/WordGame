@@ -1,13 +1,20 @@
 2019-06-12 20:10 Basic Function works
 ToDo: 
-* Need to input more crypto
-Done Take care of upper case and space
-Done- random select a coin 
-* disallow repetitive key
-Done limit the total number of guessing
-* when win or losss, need to update the score and start a new guess.
-* Don't guess the same coin
+==Done Need to input more crypto
+==Done Take care of upper case and space
+==Done- random select a coin 
+==Done disallow repetitive key
+==Done limit the total number of guessing
+==Done  when win or losss, need to update the score and start a new guess.
 
+
+ToDo:  
+* Input Crypto Data programmatically
+* Make beep when reptitive key is pressed
+* Make a sound when win or losss
+* modify the screen
+* Inport external files
+* Possible bug: sometimes the program doesn't show the loss case
 
 added a new file lisQ.js to store the question list
 ** External file listQ.js seems not working

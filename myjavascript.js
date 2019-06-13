@@ -8,12 +8,21 @@ var listQ = [
     ["Tether", "https://s2.coinmarketcap.com/static/img/coins/32x32/825.png"],
     ["EOS", "https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png"],
     ["Binance Coin", "https://s2.coinmarketcap.com/static/img/coins/32x32/1839.png"],
-    ["Stellar", "https://s2.coinmarketcap.com/static/img/coins/32x32/512.png"]
+    ["Stellar", "https://s2.coinmarketcap.com/static/img/coins/32x32/512.png"],
+    ["Dash", "https://s2.coinmarketcap.com/static/img/coins/32x32/131.png"],
+    ["Monero", "https://s2.coinmarketcap.com/static/img/coins/32x32/328.png"],
+    ["TRON", "https://s2.coinmarketcap.com/static/img/coins/32x32/1958.png"],
+    ["Cardano", "https://s2.coinmarketcap.com/static/img/coins/32x32/2010.png"],
+    ["Cosmos", "https://s2.coinmarketcap.com/static/img/coins/32x32/3794.png"],
+    ["Tezos", "https://s2.coinmarketcap.com/static/img/coins/32x32/2011.png"],
+    ["IOTA", "https://s2.coinmarketcap.com/static/img/coins/32x32/1720.png"],
+    ["NEM", "https://s2.coinmarketcap.com/static/img/coins/32x32/873.png"]
    ]
 
 var str;
 var ans = [], guessing = [], guessed = []  
 var maxGuess
+var wins=0, losses=0;
 
 function startNewGame() {
 
@@ -37,28 +46,33 @@ function startNewGame() {
 
 document.onkeyup = function (e) {
    var k = e.key;
-   guessed.push(k.toUpperCase());
-   guessing = [];
-   ans.forEach(function(e) {
-      if (guessed.indexOf(e) >= 0) guessing.push(e);
-      else guessing.push('_');
-   })
 
-    document.getElementById("guessing").innerHTML = guessing.join(" ");
-    document.getElementById("guessed").innerHTML = guessed.join(",");
-    document.getElementById("count").innerHTML = --maxGuess;
+  if (guessed.indexOf(k.toUpperCase()) < 0 ) { // repetitive
 
-   if (maxGuess >= 0 ) {// Keep guessing
+    guessed.push(k.toUpperCase());
+    guessing = [];
+    ans.forEach(function(e) {
+       if (guessed.indexOf(e) >= 0) guessing.push(e);
+       else guessing.push('_');
+    })
+
+     document.getElementById("guessing").innerHTML = guessing.join(" ");
+     document.getElementById("guessed").innerHTML = guessed.join(",");
+     document.getElementById("count").innerHTML = --maxGuess;
+
+    if (maxGuess >= 0 ) {// Keep guessing
         if (guessing.indexOf("_") < 0) { // Got it, No "_" in the array
             alert ("You won. The coin name is :" + str);
-            startNewGame();
+            document.getElementById("wins").innerHTML = ++wins;
+            startNewGame();            
         }        
-   }   else {  // lost the game
+    }   else {  // lost the game
         alert ("You don't guess right !");
+        document.getElementById("losses").innerHTML = ++losses;
         startNewGame();
-   }
+    }
 
-   
+  }
 
 }
 

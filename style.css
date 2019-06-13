@@ -1,0 +1,16 @@
+body{
+  padding: 20px;
+}
+
+#coin {
+    margin:20px;
+}
+
+#main {
+    margin:auto;
+    padding:20px;
+    border-style:solid;
+    border-color: #777777;
+    /* background-color: antiquewhite; */
+    width:450px;
+}
