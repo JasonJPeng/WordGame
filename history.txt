@@ -1,0 +1,9 @@
+2019-06-12 20:10 Basic Function works
+ToDo: 
+* Need to input more crypto
+* Take crea of upper case and space
+* random select a coin
+* disallow repetitive key
+* limit the total number of guessing
+* when win or losss, need to update the score and start a new guess.
+* Don't guess the same coin
