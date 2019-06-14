@@ -3,7 +3,7 @@ body{
 }
 
 #coin {
-    margin:20px;
+    margin:20px auto 80px auto;
 }
 
 #main {
@@ -11,6 +11,6 @@ body{
     padding:20px;
     border-style:solid;
     border-color: #777777;
-    /* background-color: antiquewhite; */
+    background-color: antiquewhite;
     width:450px;
 }

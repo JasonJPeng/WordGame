@@ -10,11 +10,18 @@ ToDo:
 
 ToDo:  
 * Input Crypto Data programmatically
-* Make beep when reptitive key is pressed
-* Make a sound when win or losss
-* modify the screen
+==Done Make beep when reptitive key is pressed
+==Done Make a sound when win or losss
+  repetitive key -> beep
+  win -> rooster
+  loss -> police
+
+==Done modify the screen
 * Inport external files
 * Possible bug: sometimes the program doesn't show the loss case
 
 added a new file lisQ.js to store the question list
 ** External file listQ.js seems not working
+
+empty.gif is used for the image place holder.(transparent)
+
